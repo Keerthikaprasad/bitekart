@@ -1,0 +1,332 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+// General Styles
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: white;
+  color: #f97316;  // Orange text color
+  overflow-x: hidden;
+}
+
+// Hero Section Styles
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(to right, #ff7f7f, #ff7f7f);
+  color: white;
+  padding: 20px;
+  overflow: hidden;
+}
+
+// Center Section (Logo, Title, Subtitle)
+.center-section {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  display: flex;
+  flex-direction: column; /* Stack logo and title vertically */
+  align-items: center;
+}
+
+.center-section .logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: white;
+  padding: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.center-section .logo:hover {
+  transform: scale(1.1);
+}
+
+.center-section .title {
+  font-size: 3rem;
+  font-weight: 600;
+  margin-top: 15px;
+  letter-spacing: 1px;
+}
+
+.center-section .subtitle {
+  font-size: 1.4rem;
+  font-weight: 300;
+  margin-top: 10px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+// Floating Icons (for fun/animations)
+.floating-icons {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+
+  .icon {
+    position: absolute;
+    top: -50px;
+    animation: floatIcons linear infinite;
+    opacity: 0.7;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .icon:hover {
+    transform: scale(1.05);
+  }
+}
+
+// Keyframes for Floating Icons
+@keyframes floatIcons {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(100vh);
+    opacity: 1;
+  }
+}
+
+// Content Section (inputs, call-to-action, buttons)
+.content {
+  position: relative;
+  z-index: 2;
+  margin-top: 30px;
+  text-align: center;
+
+  h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+
+  input {
+    width: 300px;
+    padding: 15px;
+    margin: 15px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    text-align: center;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+
+  input:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+    transform: scale(1.05);
+  }
+
+  input:focus {
+    background-color: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+  }
+}
+
+// Auth Section (buttons for signup and login)
+.auth-section {
+  margin-top: 20px;
+}
+
+.auth-btn {
+  padding: 15px 30px;
+  margin: 10px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.sign-up-btn {
+  background-color: #f97316;
+  color: white;
+}
+
+.log-in-btn {
+  background-color: #7f1d1d;
+  color: white;
+}
+
+.auth-btn:hover {
+  transform: scale(1.1);
+}
+
+// Call-to-Action and Order Recommendations
+.order-recommendation {
+  margin-top: 20px;
+  color: white;
+  font-size: 1.1rem;
+}
+
+.cta {
+  color: #f97316;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+// Restaurant Section
+.restaurant-section {
+  margin-top: 50px;
+  padding: 40px 20px;
+  background-color: white;
+  color: #f97316;
+
+  h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  .restaurant-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .restaurant-item {
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 250px;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+
+    h3 {
+      font-size: 1.5rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+    }
+
+    .order-now-btn {
+      margin-top: 10px;
+      padding: 10px;
+      background-color: #f97316;
+      color: white;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: #ff7f7f;
+      }
+    }
+  }
+}
+
+// Dishes Section
+.dishes-section {
+  margin-top: 50px;
+  padding: 40px 20px;
+  background-color: white;
+  color: #f97316;
+
+  h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  .dishes-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .dish-item {
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 250px;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+
+    h3 {
+      font-size: 1.5rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+    }
+
+    .order-now-btn {
+      margin-top: 10px;
+      padding: 10px;
+      background-color: #f97316;
+      color: white;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: #ff7f7f;
+      }
+    }
+  }
+}
+
+// Overlay (for the background blur effect)
+.overlay {
+  position: absolute;
+  inset: 0;
+  backdrop-filter: blur(4px);
+  background-color: rgba(0, 0, 0, 0.35);
+  z-index: 1;
+}
+
+// Responsiveness for smaller screens
+@media (max-width: 768px) {
+  .hero {
+    height: auto;
+    padding: 20px 10px;
+  }
+
+  .center-section .title {
+    font-size: 2rem;
+  }
+
+  .center-section .subtitle {
+    font-size: 1.2rem;
+  }
+
+  .content h1 {
+    font-size: 1.5rem;
+  }
+
+  .content input {
+    width: 80%;
+    padding: 12px;
+  }
+}

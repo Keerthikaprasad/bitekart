@@ -1,0 +1,129 @@
+// Login Page Wrapper
+.login-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f8f8f8;
+}
+
+// Login Form Styling
+.login-form {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+  }
+
+  .form-group {
+    margin-bottom: 1rem;
+
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+      color: #333;
+      font-size: 1rem;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      background-color: #f7f7f7;
+      transition: border-color 0.3s ease, background-color 0.3s ease;
+
+      &:focus {
+        border-color: #ff5252;
+        background-color: #fff;
+        outline: none;
+      }
+
+      &:hover {
+        border-color: #ff5252;
+      }
+    }
+  }
+
+  .forgot-password {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #ff5252;
+    cursor: pointer;
+    transition: color 0.3s;
+
+    &:hover {
+      text-decoration: underline;
+      color: #e84343;
+    }
+  }
+
+  // Submit Button
+  button {
+    width: 100%;
+    padding: 12px;
+    background-color: #ff5252;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #e84343;
+    }
+  }
+
+  // Error Message Styling (if any)
+  .error-message {
+    color: #d9534f;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+}
+
+// Media Query for mobile responsiveness
+@media (max-width: 480px) {
+  .login-wrapper {
+    padding: 10px;
+  }
+
+  .login-form {
+    padding: 1.5rem;
+    max-width: 100%;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .form-group input {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  button {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+  .forgot-password {
+    font-size: 0.8rem;
+  }
+}

@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Full height for a more immersive hero section */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(to right, #7f1d1d, #b91c1c, #f97316);
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+  padding: 20px; /* Added padding for spacing */
+}
+
+// Centered Section
+.center-section {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 10px;
+}
+
+.center-section .logo {
+  width: 120px; /* Slightly larger logo */
+  height: 120px;
+  border-radius: 50%;
+  background-color: white;
+  padding: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease; /* Adding hover effect */
+}
+
+.center-section .logo:hover {
+  transform: scale(1.1); /* Logo zoom effect on hover */
+}
+
+.center-section .title {
+  font-size: 3rem; /* Larger title */
+  font-weight: 600;
+  margin-top: 15px;
+  letter-spacing: 1px; /* Adding letter spacing for better readability */
+}
+
+.center-section .subtitle {
+  font-size: 1.4rem; /* Slightly larger subtitle */
+  font-weight: 300;
+  margin-top: 10px;
+  color: rgba(255, 255, 255, 0.7); /* Lighter subtitle for better contrast */
+}
+
+// Floating Food Icons
+.floating-icons {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.floating-icons .icon {
+  position: absolute;
+  top: -50px;
+  animation: floatIcons linear infinite;
+  opacity: 0.7; /* Slightly lower opacity for smoother appearance */
+  transition: transform 0.5s ease-in-out; /* Add smoothness to icon movement */
+}
+
+.floating-icons .icon:hover {
+  transform: scale(1.05); /* Slightly scale up the icon on hover */
+}
+
+@keyframes floatIcons {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(100vh);
+    opacity: 1;
+  }
+}
+
+// Input Fields
+.content {
+  position: relative;
+  z-index: 2;
+  margin-top: 30px; /* Increased margin for better spacing */
+  text-align: center;
+}
+
+.content h1 {
+  font-size: 2rem; /* Smaller heading size for more balance */
+  font-weight: 600;
+  margin-bottom: 20px; /* Increased space below the heading */
+  color: white;
+}
+
+.content input {
+  width: 300px;
+  padding: 15px;
+  margin: 15px;
+  border: none;
+  border-radius: 30px; /* More rounded input fields */
+  font-size: 1rem;
+  text-align: center;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.2); /* Slight transparent background */
+  color: white;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+}
+
+.content input:hover {
+  background-color: rgba(255, 255, 255, 0.4); /* Slightly brighter on hover */
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.content input:focus {
+  background-color: rgba(255, 255, 255, 0.6); /* More contrast on focus */
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Subtle glow effect on focus */
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  backdrop-filter: blur(4px); /* Increased blur for more focus on content */
+  background-color: rgba(0, 0, 0, 0.35); /* Darker overlay for better contrast */
+  z-index: 1;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .hero {
+    height: auto; /* Allow height to adjust on smaller screens */
+    padding: 20px 10px;
+  }
+
+  .center-section .title {
+    font-size: 2rem; /* Adjust title size for smaller screens */
+  }
+
+  .center-section .subtitle {
+    font-size: 1.2rem; /* Adjust subtitle size */
+  }
+
+  .content h1 {
+    font-size: 1.5rem; /* Adjust heading size */
+  }
+
+  .content input {
+    width: 80%; /* Make input fields take up more width on small screens */
+    padding: 12px;
+  }
+}
