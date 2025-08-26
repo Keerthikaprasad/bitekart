@@ -131,9 +131,9 @@ const HomePage = () => {
             {[
               { title: "Indian Delights", img: bg1 },
               { title: "Chinese Bites", img: bg2 },
-              { title: "Italian Pizzas", img: bg3 },
+              { title: "Kerala style", img: bg3 },
               { title: "Continental", img: bg4 },
-              { title: "Healthy Salads", img: bg5 },
+              { title: "BBQ Chicken Bowl", img: bg5 },
               { title: "Sweet Treats", img: bg6 },
             ].map((dish, i) => (
               <div key={i} className="px-2">
@@ -182,9 +182,9 @@ const HomePage = () => {
         <h2 className="text-4xl font-extrabold text-center mb-12">🌟 Today's Top Picks</h2>
         <div className="max-w-6xl mx-auto flex flex-wrap justify-center gap-8 px-4">
           {[
-            { name: "Sambar Rice", tag: "🔥 Trending", desc: "The taste of South India in a single Plate.", img: bg3 },
+            { name: "South Indian Special", tag: "🔥 Trending", desc: "The taste of South India in a single Plate.", img: bg3 },
             { name: "Chicken Bowl", tag: " Trending", desc: "Tonight's forecast:100% chance of deliciousness.", img: bg5 },
-            { name: "Indian cuisine dishes", tag: "⏱️ Fast Delivery", desc: "Spicy, savory, and soul-satisfying.", img: bg2 },
+            { name: "Indian Cuisine Dishes", tag: "⏱️ Fast Delivery", desc: "Spicy, savory, and soul-satisfying.", img: bg2 },
           ].map((item, i) => (
             <div key={i} className="bg-white w-80 rounded-xl overflow-hidden shadow-xl hover:scale-105 transition-transform duration-300">
               <img src={item.img} alt={item.name} className="h-44 w-full object-cover" />
