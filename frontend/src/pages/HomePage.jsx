@@ -182,9 +182,9 @@ const HomePage = () => {
         <h2 className="text-4xl font-extrabold text-center mb-12">🌟 Today's Top Picks</h2>
         <div className="max-w-6xl mx-auto flex flex-wrap justify-center gap-8 px-4">
           {[
-            { name: "Tandoori Paneer Pizza", tag: "🔥 Trending", desc: "A fiery fusion of spices and creamy paneer.", img: bg3 },
-            { name: "Vegan Buddha Bowl", tag: "🌿 Vegan", desc: "Power-packed greens and grains, beautifully balanced.", img: bg5 },
-            { name: "Classic Schezwan Noodles", tag: "⏱️ Fast Delivery", desc: "Spicy, savory, and soul-satisfying.", img: bg2 },
+            { name: "Sambar Rice", tag: "🔥 Trending", desc: "The taste of South India in a single Plate.", img: bg3 },
+            { name: "Chicken Bowl", tag: "🌿 Vegan", desc: "Tonight's forecast:100% chance of deliciousness.", img: bg5 },
+            { name: "Indian cuisine dishes", tag: "⏱️ Fast Delivery", desc: "Spicy, savory, and soul-satisfying.", img: bg2 },
           ].map((item, i) => (
             <div key={i} className="bg-white w-80 rounded-xl overflow-hidden shadow-xl hover:scale-105 transition-transform duration-300">
               <img src={item.img} alt={item.name} className="h-44 w-full object-cover" />
